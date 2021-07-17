@@ -1,7 +1,9 @@
 node_modules
 package-lock.json
 .DS_Store
+.env
 
 # Client
 client/node_modules
 client/yarn.lock
+client/.DS_Store
