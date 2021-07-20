@@ -9,6 +9,8 @@ This project has
 ## To run NODE Server 
 on root of the folder `yarn start` will run nodemon for server/index.js
 
+![Demo into how to run it](run-demo.gif)
+
 ## To run React App
 1. `cd client` to move into `/client` folder
 2. `yarn start` to start the app
