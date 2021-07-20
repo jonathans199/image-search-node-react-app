@@ -9,7 +9,6 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-// import fetch from 'node-fetch'
 global.fetch = fetch
 
 URL = require('url').URL
@@ -21,10 +20,12 @@ const unsplash = unsplashJs.createApi({
   headers: { 'X-Custom-Header': 'foo' },
 })
 
-app.get('/api', (req, res) => {
+app.get('/api/:search', (req, res) => {
+  const { search } = req.params
+
   unsplash.search
     .getCollections({
-      query: 'dog',
+      query: search,
       page: 1,
       perPage: 10,
     })
@@ -32,8 +33,6 @@ app.get('/api', (req, res) => {
       res.status(200).send(data.response.results)
     })
     .catch(err => console.log(err))
-
-  console.log('responding here')
 })
 
 app.listen(3001, () => console.log('server running'))
