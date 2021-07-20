@@ -11,7 +11,7 @@ on root of the folder `yarn start` will run nodemon for server/index.js
 
 ![Demo into how to run it](assets/run-demo.gif)
 
-![How to start client and Server](assets/run-demo2)
+![How to start client and Server](assets/run-demo2.gif)
 
 ## To run React App
 1. `cd client` to move into `/client` folder
